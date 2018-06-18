@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+   
+  resources :products
+
   get 'signup' => 'customers#new'
   resources :customers
 

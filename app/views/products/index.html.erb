@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Mini Market</h1>
+
+<% @products.each do |product| %>
+  <div class = "entry">
+    <table>
+      <tr>
+        <th><%= product.name %></th>
+      </tr>
+      <tr>
+        <td><%= product.description %></td>
+      </tr>
+      <tr>
+        <td><%= link_to 'Show', product_path(product) %></td>
+      </tr>
+    </table>
+  </div>
+<% end %>
