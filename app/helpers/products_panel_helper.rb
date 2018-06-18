@@ -1,2 +1,2 @@
-module ProductsPanelHelper
+module ProductsHelper
 end
