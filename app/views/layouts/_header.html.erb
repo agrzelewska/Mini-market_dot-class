@@ -1,0 +1,11 @@
+<% if current_customer %>
+  Logged in as <strong><%= current_customer.email %></strong>.</br>
+  <%= link_to 'Sign out', logout_path, method: :delete %>
+<% else %>
+  <p>If you are Customer click here:</p>
+    <li><%= link_to 'Sign in', login_path %></li>
+    <li><%= link_to 'Sign up', signup_path %></li>
+  <p>If you are Merchant click here:</p>
+    <li><%= link_to 'Sign in', login_path %></li>
+    <li><%= link_to 'Sign up', signup_path %></li>    
+<% end %>

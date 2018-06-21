@@ -4,7 +4,7 @@ class CustomersController < ApplicationController
   end
 
   def create
-    customer = Customer.new(params)
+    customer = Customer.new(customer_params)
     if customer.save
       session[:customer_id] = customer.id
       redirect_to customer
