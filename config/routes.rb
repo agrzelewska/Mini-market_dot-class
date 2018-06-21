@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'dashboards#show'
+
   get 'signup' => 'customers#new'
   resources :customers
 
@@ -7,4 +8,6 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
 
   delete 'logout' => 'sessions#destroy'
+  
+  resources :products
 end
