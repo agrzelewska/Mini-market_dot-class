@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'dashboards#show'
   get 'signup' => 'customers#new'
   resources :customers
 
