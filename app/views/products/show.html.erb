@@ -1,4 +1,5 @@
 <h3><%= @product.name %></h3>
 <p><%= @product.description %></p>
 <p><%= @product.created_at %></p>
+<%= link_to 'Make a new offer', new_offer_path(:id => @product.id) %>
 <p><%= link_to 'Show all products', products_path %></p>

@@ -10,4 +10,7 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#destroy'
   
   resources :products
-end
+ 
+  resources :offers
+  post 'offers/new' => 'offers#create'
+ end

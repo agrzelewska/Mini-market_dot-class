@@ -1,0 +1,8 @@
+<h3>You can make your offer for <%= @product.name %>. </h3>
+<h3>Enter your offer in PLN here: </h3>
+<%= form_for :offer do |f| %>
+    <%= f.label :suggested_price %><br>
+    <%= f.number_field :suggested_price %><br>
+    <%= f.submit "Send" %>
+<% end %>
+<p><%= link_to 'Show all products', products_path %></p>
