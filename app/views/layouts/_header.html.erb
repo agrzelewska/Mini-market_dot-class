@@ -1,5 +1,6 @@
 <% if current_customer %>
   Logged in as <strong><%= current_customer.email %></strong>.</br>
+  <%= link_to 'My account', customer_path(current_customer) %>
   <%= link_to 'Sign out', logout_path, method: :delete %>
 <% else %>
   <p>If you are Customer click here:</p>

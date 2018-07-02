@@ -1,0 +1,16 @@
+<h3>My offers:</h3>
+<table>
+  <tr>
+    <th>Product</th>
+    <th>Suggested price</th>
+    <th>Offer made at</th>
+  </tr>
+<% @offers.each do |offer| %>
+  <tr>
+    <td><%= offer.product.name %></td>
+    <td><%= offer.suggested_price %></td>
+    <td><%= offer.created_at %></td>
+  </tr>
+<% end %>
+</table>
+<p><%= link_to 'Show all products', products_path %></p>

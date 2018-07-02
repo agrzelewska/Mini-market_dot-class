@@ -12,5 +12,4 @@ Rails.application.routes.draw do
   resources :products
  
   resources :offers
-  post 'offers/new' => 'offers#create'
- end
+end
