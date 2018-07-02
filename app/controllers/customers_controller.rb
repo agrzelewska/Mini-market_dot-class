@@ -1,4 +1,5 @@
 class CustomersController < ApplicationController
+  skip_before_action :authenticate_customer!, only: [:new, :create]
   
   def new
     @customer = Customer.new
@@ -15,7 +16,6 @@ class CustomersController < ApplicationController
   end
 
   def show
-    @product = Product.find(params[:id])
     @customer = current_customer
     @offers = @customer.offers
   end
